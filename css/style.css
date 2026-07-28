@@ -705,11 +705,21 @@ h1, h2, h3, h4, h5, h6, .display-font {
 }
 
 /* --- CLICKABLE PROJECT CARDS --- */
-.project-card-link {
+.project-card-link,
+.project-card-link:hover,
+.project-card-link:focus,
+.project-card-link:active,
+.project-card-link *,
+.project-card-link:hover * {
   display: block;
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
   height: 100%;
+}
+
+.project-card-link * {
+  display: revert;
+  height: revert;
 }
 
 .project-card-link .portfolio-card {
